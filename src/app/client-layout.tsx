@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Navbar from "./components/Navbar";
+import Footer from './components/Footer'
 
 function Loader() {
   return (
@@ -31,6 +32,7 @@ export default function ClientLayout({
       {loading && <Loader />}
       <Navbar />
       <main className="pt-16">{children}</main>
+      <Footer />
     </>
   );
 }
